@@ -10,6 +10,7 @@ from api.models import db
 from api.routes import api
 from api.admin import setup_admin
 from api.commands import setup_commands
+import stripe
 
 # from models import Person
 
@@ -36,6 +37,9 @@ setup_admin(app)
 
 # add the admin
 setup_commands(app)
+
+
+
 
 # Add all endpoints form the API with a "api" prefix
 app.register_blueprint(api, url_prefix='/api')
