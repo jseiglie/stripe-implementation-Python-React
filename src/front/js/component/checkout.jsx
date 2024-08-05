@@ -11,7 +11,7 @@ export const CheckoutForm = () => {
     const [loading, setLoading] = useState(false);
   
     useEffect(() => {
-        // Create PaymentIntent as soon as the page loads
+        // Create PaymentIntent as soon as the page loads 
         fetch(process.env.BACKEND_URL + '/api/create-payment', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -19,7 +19,7 @@ export const CheckoutForm = () => {
           body: JSON.stringify({ amount: 1000, currency: 'usd' }) // Amount in cents
         })
           .then((res) => res.json())
-          .then((data) => setClientSecret(data.clientSecret));
+          .then((data) => setClientSecret(data.clientSecret)); 
       }, []);
 
 
