@@ -12,7 +12,7 @@ export const CheckoutForm = () => {
   
     useEffect(() => {
         // Create PaymentIntent as soon as the page loads
-        fetch('https://potential-fiesta-q57vjgxrwqwh4j66-3001.app.github.dev/api/create-payment', {
+        fetch(process.env.BACKEND_URL + '/api/create-payment', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           //la cantidad ha pagar esta puesta fija, pero puede recibir un objeto desde el contexto

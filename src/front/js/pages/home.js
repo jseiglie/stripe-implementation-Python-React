@@ -8,8 +8,8 @@ import { CheckoutForm } from "../component/checkout.jsx";
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
-	//la clave en .env!!! ----------- esta de abajo es la clave
-	const stripePromise = loadStripe('pk_test_51LTCnvA9wzTLXCekEhm8avkeiNhSTSIGyDiiW5mv6I980PUyArXqXDBJiiYemkIhhAJr7WncWbslGBEHQdRGUnKw001ZOSE45L');
+	//la clave en .env!!! ----------- esta de abajo es la clave publica
+	const stripePromise = loadStripe(process.env.STRIPE_PROMISE);
 	
 	
 	return (
