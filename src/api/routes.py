@@ -33,7 +33,7 @@ def create_payment():
         data = request.json
         #PODEMOS PASAR TODOS LOS ELEMENTOS QUE PERMITA EL OBJETO DE PAYMENTINTENT.CREATE 
         intent = stripe.PaymentIntent.create(
-            amount=data['amount'],
+            amount=data['amount'], # se deberia de calcular el precio en el back, no recibirse del front
             currency=data['currency'],
             automatic_payment_methods={
                 'enabled': True
