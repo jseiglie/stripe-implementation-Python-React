@@ -3,7 +3,7 @@ import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 import { loadStripe } from '@stripe/stripe-js';
-import { Elements, CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
+import { Elements } from '@stripe/react-stripe-js';
 import { CheckoutForm } from "../component/checkout.jsx";
 
 export const Home = () => {

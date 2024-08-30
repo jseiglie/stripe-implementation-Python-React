@@ -9,8 +9,10 @@ export const CheckoutForm = () => {
     const elements = useElements();
     const [clientSecret, setClientSecret] = useState('');
     const [loading, setLoading] = useState(false);
-  
+
+
     useEffect(() => {
+
         // Create PaymentIntent as soon as the page loads 
         fetch(process.env.BACKEND_URL + '/api/create-payment', {
           method: 'POST',
