@@ -25,6 +25,10 @@ def handle_hello():
 
     return jsonify(response_body), 200
 
+def getPrice(ids):
+    #bnuscar los ids de los productos
+    #sumar los precios para generar un total
+    #devolver ese total
 
 
 @api.route('/create-payment', methods=['POST'])
@@ -33,7 +37,8 @@ def create_payment():
         data = request.json
         #PODEMOS PASAR TODOS LOS ELEMENTOS QUE PERMITA EL OBJETO DE PAYMENTINTENT.CREATE 
         intent = stripe.PaymentIntent.create(
-            amount=data['amount'], # se deberia de calcular el precio en el back, no recibirse del front
+            #amount=getPrice(data['products']), # se deberia de calcular el precio en el back, no recibirse del front
+            amount=data['amount'], 
             currency=data['currency'],
             automatic_payment_methods={
                 'enabled': True
