@@ -26,9 +26,12 @@ def handle_hello():
     return jsonify(response_body), 200
 
 def getPrice(ids):
+    total = 0
     #bnuscar los ids de los productos
     #sumar los precios para generar un total
     #devolver ese total
+
+    return total
 
 
 @api.route('/create-payment', methods=['POST'])
